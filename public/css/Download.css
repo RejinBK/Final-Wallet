@@ -1,0 +1,194 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    overflow-x: hidden;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media (max-width:952px){
+  
+    .logo{
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+
+    }
+    .navbar ul li a{
+        font-size:  17px ;
+    }
+    
+}
+@media (max-width:858px){
+    .checkbtn{
+        display: block;
+        
+    }
+    .logo{
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+
+    }
+    .navbar{
+        position: fixed;
+        top: 0%;
+    }
+    nav ul{
+        position:fixed ;
+        width: 100%;
+        height: 60vh;
+        top: 120px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        background-size: cover;
+        background-color:rgba(0, 0, 0,0.295);
+        backdrop-filter:blur(6.5px );
+        
+    }
+     nav ul li{
+        display: block;
+        margin: 40px 0px;
+        line-height: 30px;
+    }
+     nav ul li a{
+        font-size: 100%;
+      
+    }
+  
+    #check:checked~ul{
+    left: 0px ;
+        
+    }
+
+
+    
+}
+
+@media (max-width:650px){
+    .footer{
+        flex-flow: column;
+    }
+    .footer h1{
+        text-align: center;
+    }
+    .footer .icons{
+        padding: 2rem 0;
+    }
+}
+
+.navbar{
+    height: 120px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.295);
+    position: fixed;
+    top: 0%;
+    z-index: 9999;
+    
+}
+.navbar.animate{
+    top: -120px;
+    transition:ease-in-out .2s;
+}
+.navbar.sticky{
+    top: 0;
+    z-index: 99;
+}
+
+.logo{
+    width: 140px;
+    height: auto;
+    padding: 20px;
+    float: left;
+    
+
+}
+
+ ul{
+    float: right;
+    margin-right: 35px;
+    background-size: cover;
+    
+}
+ ul li{
+    list-style: none;
+    margin: 0 20px;
+    display: inline-block;
+    line-height: 80px;
+}
+ ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 6px 13px;
+    transition: .4s;
+}
+
+.navbar ul li a:hover{
+    background: rgb(18, 170, 216);
+    border-radius: 2px;
+    text-decoration:  underline;
+}
+
+.blank{
+    background-color: rgb( 1, 100, 107);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 1rem;
+    overflow: hidden !important;
+
+}
+
+
+.footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    background: rgba(36, 36, 36);
+}
+
+.footer h1{
+    color: white;
+    letter-spacing: .1rem;
+    font-weight: 400;
+
+}
+
+.footer .icons a{
+    color: white;
+    font-size: 1.8rem;
+    padding: 0 2rem;
+
+}
+
+
+
+
+
+ 
+
+
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAOcoin</title>
+    <link rel="stylesheet" href="css/NAOcoin.css">
+    <link rel="icon" href="./img/bitcoin-bit-coin-money-currency_108540.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+   
+        <nav class ="navbar">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+                <a href="index.html">
+                    <img class="logo" src="./img/graph-lines-and-bars-inside-compass-4370ld.png"></a>
+                    <ul>
+                        <li><a href="index.html"> Home</a></li>
+                        <li><a href="NAOcoin.html"> NAOcoin</a></li>
+                        <li><a href="Stats.html"> Stats</a></li>
+                        <li><a href="History.html"> History</a></li>
+                        <li><a href="Download.html"> Downloads</a></li>
+                     </ul>
+            </nav>
+
+        <div class="wrapper">
+        <div class="center">
+            <h1>Generate your NAO coin wallet.</h1>
+            
+            <img class="logo2" src="./img/shoppaymentorderbuy-04_icon-icons.com_73886.png">
+
+
+
+            <div style="display:flex; align-items: center; justify-content: center; background:#000" >
+            <button class="fa fa-key" id="genkeys" > Generate Keys</button>   
+            <textarea id = "pub_keys" cols = 90  rows=1> Click Generate!</textarea>
+        </div>
+
+
+
+
+
+        </div>
+         </div>
+
+        
+
+         <section class="footer">
+            <h1>Created by Nao Coin team | all rights reserved.</h1>
+    
+            <div class="icons">
+                <a href="https://www.facebook.com/" class="fab fa-facebook-f" target="_blank"></a>
+                <a href="https://twitter.com/?lang=en" class="fab fa-twitter" target="_blank"></a>
+                <a href="https://www.instagram.com/?hl=en" class="fab fa-instagram" target="_blank"></a>
+    
+
+            </div>
+    
+        </section>
+
+    
+
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+         <script src="jQuery/js/jquery-3.6.0.min.js"> </script>
+         <script src="./js/main.js"></script>
+        
+         
+        <script>
+            $(function(){
+                var scroll= $(document).scrollTop();
+                var navHeight = $('.navbar').outerHeight();
+    
+                $(window).scroll(function(){
+    
+                    var scrolled= $(document).scrollTop();
+    
+                    if(scrolled > navHeight){
+                        $('.navbar').addClass('animate');
+                    }else{
+                        $('.navbar').removeClass('animate');
+                    }
+    
+                    if(scrolled > scroll){
+                         $('.navbar').removeClass('sticky');
+    
+                    }else{
+                        $('.navbar').addClass('sticky');
+                    }
+                    
+                    scroll = $(document).scrollTop();
+                })
+    
+            });
+    
+        </script>
+
+
+
+
+    
+</body>
+</html>

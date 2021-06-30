@@ -1,0 +1,30 @@
+{
+  "name": "naocoin",
+  "version": "1.0.0",
+  "description": "PROJECT WORK ON CRYPTO COIN",
+  "main": "./main/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "okay": "nodemon ./main/index.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016https://github.com/diwasdhungana/NAOcoin.git"
+  },
+  "author": "NAOC group",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "crypto-js": "^4.0.0",
+    "dotenv": "^10.0.0",
+    "elliptic": "^6.5.4",
+    "express": "^4.17.1",
+    "glob": "^7.1.7",
+    "ngrok": "^4.0.1",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7",
+    "uuid": "^8.3.2",
+    "uuidv1": "^1.6.14",
+    "ws": "^7.4.6"
+  }
+}
