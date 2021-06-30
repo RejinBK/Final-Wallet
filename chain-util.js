@@ -21,11 +21,11 @@ class ChainUtil{
 
     static verifySignature(publicKey,signature,dataHash)
     {
-        this.publicKey = fs.readFileSync('./keys/public.pem', 'utf8', (err, file) => {if (err) throw err;});
+
         const verify = crypto.createVerify('SHA256');
         verify.write(dataHash);
         verify.end();
-        const verified = verify.verify(this.publicKey, signature, 'hex')
+        const verified = verify.verify(publicKey, signature, 'hex')
         console.log(verified);
         return verified;
     }

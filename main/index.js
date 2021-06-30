@@ -98,7 +98,7 @@ app.post('/transact',(req,res)=>{
 app.get('/public-key',(req,res)=>{
     //return res.json(wallet.publickey);
     //console.log(req);
-    res.json( { publicKey : wallet.publicKey });
+    res.json( { publicKey : wallet.address });
 })
 
 
@@ -115,18 +115,18 @@ p2pserver.listen();
 
 
 
-  // ngrok.connect({
-  //   proto: "tcp",
-  //   addr: P2P_PORT,
-  //   authtoken : TOKEN ,
-  //   region : "in"
+  ngrok.connect({
+    proto: "tcp",
+    addr: P2P_PORT,
+    authtoken : TOKEN ,
+    region : "in"
 
-  // })
-  // .then(url => {
-  //   console.log(`ngrok tunnel opened at: ${url}`);
+  })
+  .then(url => {
+    console.log(`ngrok tunnel opened at: ${url}`);
 
-  // })
-  // .catch((error) => {
-  //   console.error("Error opening ngrok tunnel: ", error);
-  //   process.exitCode = 1;
-  // })
+  })
+  .catch((error) => {
+    console.error("Error opening ngrok tunnel: ", error);
+    process.exitCode = 1;
+  })

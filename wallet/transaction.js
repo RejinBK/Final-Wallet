@@ -15,7 +15,7 @@ class Transaction{
 
     update(senderWallet,recipient,amount){
 
-        const senderOutput = this.outputs.find(output => output.address == senderWallet.publicKey);
+        const senderOutput = this.outputs.find(output => output.address == senderWallet.address);
 
         if(amount > senderWallet.amount){
             console.log(`Amount ${amount} exceeds balance`);
@@ -40,7 +40,7 @@ class Transaction{
         }
         // call to the helper function that creates and signs the transaction outputs
         return Transaction.transactionWithOutputs(senderWallet,[
-            {amount: senderWallet.balance - amount , address: senderWallet.publicKey },
+            {amount: senderWallet.balance - amount , address: senderWallet.address },
             {amount: amount , address: recipient}
         ])
     }
